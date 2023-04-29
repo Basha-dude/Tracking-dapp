@@ -68,8 +68,8 @@ contract Tracking {
     }
      function createShipment(address _receiver,uint256 _pickupTime,uint256 _distance,uint256 _price
      ) public payable {
-      require(msg.value == _price);
-
+         
+ 
        Shipment memory shipment = Shipment(
         msg.sender,
        _receiver,
@@ -82,7 +82,7 @@ contract Tracking {
        ); 
 
         Shipments[msg.sender].push(shipment);
-        shipmentCount++;
+        shipmentCount++; 
 
         typeShipments.push(TypeShipment(
            msg.sender,
